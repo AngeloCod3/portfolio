@@ -6,10 +6,18 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        .i-description {
+            a {
+                text-decoration: underline;
+                color: rgb(0, 160, 125);
+            }
+        }
     }
     .intro-right {
         flex: 1;
-        position: relative;   
+        position: relative;
+           
     }
 
     .i-intro {
@@ -94,9 +102,39 @@
             position: absolute;
             top: 0;
             right: 0;
+            transition: all .5s ease ;
 
         }
+
+        
     }
 
 
+}
+
+@media screen and (max-width: 768px) {
+    .intro-main-container {
+        flex-direction: column;
+        text-align: center;
+        height: 200vh;
+
+        .left-wrapper {
+            padding: 10px;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .title-item{
+            justify-content: center;
+        }
+
+        .i-bg {
+            width: 80%;
+        }
+
+        .i-description{
+            display: none;
+        }
+    }
 }

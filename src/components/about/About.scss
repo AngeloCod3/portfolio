@@ -49,3 +49,36 @@
 
     }
 }
+
+@media screen and (max-width: 768px) {
+    .about-container {
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+
+        .about-left {
+            display: flex;
+            justify-content: center;
+            
+            .a-card {
+                top: 90px;
+                position: relative;
+                height: 30vh;
+      
+            }
+
+            .a-card.bg {
+                display: none;
+            }
+        }
+
+        .about-right {
+            display: flex;
+            align-items: center;
+            text-align: center;
+           
+        }
+    }
+
+
+}

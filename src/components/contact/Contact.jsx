@@ -2,11 +2,15 @@ import './Contact.scss';
 import Phone from '../../assets/phone.png'
 import Email from '../../assets/email.png'
 import Address from '../../assets/address.png'
-import { useRef, useState } from 'react';
+import { useContext, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser'
+import { ThemeContext } from '../../Context';
 
 
 const Contact = () => {
+
+  const theme = useContext(ThemeContext);
+  const darkMode = theme.state.darkMode;
 
   const formRef = useRef();
   const [send,setSend] = useState(false);
@@ -27,7 +31,7 @@ const Contact = () => {
 
 
   return (
-    <div className='contact-container'>
+    <div id='contact' className='contact-container'>
         <div className="contact-bg"></div>
         <div className="contact-wrapper">
           <div className="contact-left">
@@ -53,12 +57,12 @@ const Contact = () => {
               <b>What can I do for you?</b> Let me know down below!
             </p>
             <form ref={formRef} onSubmit={handleSubmit}>
-              <input id='contactName' type="text" placeholder='Name' name='user_name' required/>
-              <input type="text" placeholder='Subject' name='user_subject' required/>
-              <input type="text" placeholder='Email' name='user_email' required/>
-              <textarea name="message" cols="30" rows="10" placeholder='Write down your message or offer or whatever you want, this actually works!' required></textarea>
+              <input style={{backgroundColor: darkMode ? '#353535': 'white'}} id='contactName' type="text" placeholder='Name' name='user_name' required/>
+              <input style={{backgroundColor: darkMode ? '#353535' : 'white'}} type="text" placeholder='Subject' name='user_subject' required/>
+              <input style={{backgroundColor: darkMode ? '#353535' : 'white'}} type="text" placeholder='Email' name='user_email' required/>
+              <textarea style={{backgroundColor: darkMode ? '#353535' : 'white'}} name="message" cols="30" rows="10" placeholder='Write down your message or offer or whatever you want, this actually works!' required></textarea>
               <button>Submit</button>
-              {send && <b>Thanks you, I'll texting you back!</b>}
+              {send && <b>Thanks you, I'll be texting you back!</b>}
             </form>
           </div>
         </div>

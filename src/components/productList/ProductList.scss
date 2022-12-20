@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
 
+
     .productList-title {
         font-size: 50px;
         font-weight: 700;
@@ -20,5 +21,12 @@
         flex-wrap: wrap;
         justify-content: space-between;
         width: 100%;
+        min-width: 300px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .productList-container{
+        margin-top: 500px;
     }
 }

@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import reactLogo from '../../assets/logo.svg';
+import { ThemeContext } from '../../Context';
 import './Intro.scss';
 
 const Intro = () => {
+
+    const theme = useContext(ThemeContext);
+    const darkMode = theme.state.darkMode;
+
+
   return (
     <div className='intro-main-container'>
         <div className="intro-left">
@@ -22,13 +28,13 @@ const Intro = () => {
                 <p>
                 I'm a web developer and learning about hybrid mobile apps. I love React since I learn it, and also love coding fullstack apps. <br />
                 By the way I speak 4 languages (Spanish, English, Portuguese, German and learning Chinese).
-                Hope I can help you with anything, and if you have a good remote offer just hit me up.
+                Hope I can help you with anything, and if you have a good remote offer just <a href='#contact'>hit me up.</a>
                 </p>
             </div>
             </div>
         </div>
         <div className="intro-right">
-            <div className="i-bg">
+            <div className="i-bg" style={{backgroundColor: darkMode ? '#efefef' : '#000'}}>
             
             </div>
             <img src={reactLogo} alt="Intro" />
