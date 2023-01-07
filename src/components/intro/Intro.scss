@@ -118,6 +118,10 @@
         text-align: center;
         height: 200vh;
 
+        .title-wrapper {
+            
+        }
+
         .left-wrapper {
             padding: 10px;
             align-items: center;
@@ -131,10 +135,15 @@
 
         .i-bg {
             width: 80%;
+            height: 300px;
         }
 
         .i-description{
-            display: none;
+            // display: none;
+        }
+
+        .intro-right{
+            
         }
     }
 }
