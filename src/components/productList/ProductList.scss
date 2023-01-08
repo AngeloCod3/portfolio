@@ -23,12 +23,22 @@
         width: 100%;
         min-width: 300px;
     }
+
+    .loadmore-container{
+        margin: 40px 0px;
+        display: flex;
+        justify-content: center;
+    }
 }
 
 @media screen and (max-width:768px) {
     .productList-container{
-        margin-top: 300px;
+        margin-top: 100px;
         justify-content: center;
         padding: 50px 0px;
+
+        .productList-items{
+            justify-content: center;
+        }
     }
 }
