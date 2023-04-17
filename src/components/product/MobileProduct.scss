@@ -1,0 +1,15 @@
+.mobile-app-conteiner {
+    display: grid;
+    place-items: center;
+    align-items: baseline;
+    border-radius: 40px;
+    box-shadow: 0px 6px 13px 0px rgba(19, 0, 0, 0.53);
+    background-position: center;
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    margin: 0 10px;
+    img {
+        width: 100%;
+    }
+}
