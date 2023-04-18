@@ -5,6 +5,7 @@ import { useState } from "react";
 import LoadMoreButton from "./LoadMoreButton";
 import MobileProduct from "../product/MobileProduct";
 
+
 const ProductList = () => {
   const [loadMore, setLoadMore] = useState(3);
   const initial = data.slice(0, loadMore);
@@ -42,12 +43,21 @@ const ProductList = () => {
 
         <div className="mobile-cards">
           {mobile.map((item) => (
-            <MobileProduct key={item.id} image={item.image} title={item.title}/>
+            <MobileProduct
+              key={item.id}
+              image={item.image}
+              title={item.title}
+            />
           ))}
         </div>
 
         <div className="loadmore-container">
-          <a href="https://play.google.com/store/apps/developer?id=AngeloCode" target="_blank"><LoadMoreButton name="Go to Play Store" /></a>
+          <a
+            href="https://play.google.com/store/apps/developer?id=AngeloCode"
+            target="_blank"
+          >
+            <LoadMoreButton name="Go to Play Store" />
+          </a>
         </div>
       </div>
     </div>

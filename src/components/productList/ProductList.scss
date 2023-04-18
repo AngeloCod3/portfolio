@@ -34,11 +34,12 @@
     flex-direction: column;
     gap: 20px;
     .mobile-title {
-        font-size: 25px;
+        font-size: 2rem;
         text-align: left;
     }
     .mobile-cards {
       display: flex;
+      flex-wrap: wrap;
       gap: 20px;
     }
   }
@@ -52,6 +53,18 @@
 
     .productList-items {
       justify-content: center;
+      align-items: center;
+    }
+
+    .mobile-products {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+      .mobile-cards {
+        justify-content: center;
+      }
     }
   }
 }
